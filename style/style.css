@@ -1,0 +1,91 @@
+:root {
+  --background: rgb(10, 25, 47);
+  --primary: #64ffda;
+  --secondary: #57cbff;
+  --text: #ccd6f6;
+  --accent: #ccd6f6b0;
+  --feature: #8892b0;
+  --alpha: 0.8;
+}
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
+
+/* font-family: 'Courier Prime', monospace; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Bai Jamjuree", sans-serif;
+  background-color: var(--background);
+  color: var(--feature);
+  /* padding: 0 10%; */
+}
+/* =================================== HEADER START ===================================*/
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding: 20px 5%;
+  border: 2px solid white;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(10, 25, 47, 0.7);
+  backdrop-filter: blur(3px);
+}
+/* START ==== UBAH INI JIKA PAKE LOGO NONTEKS ===== */
+.logo {
+  width: 50px;
+}
+/* END ==== UBAH INI JIKA PAKE LOGO NONTEKS ==== */
+
+.number {
+  color: var(--primary);
+}
+
+.navbar {
+  font-family: "Courier Prime", monospace;
+}
+
+.navbar a {
+  font-size: 15px;
+  font-weight: 200;
+  color: var(--text);
+  text-decoration: none;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: var(--primary);
+}
+/* =================================== HEADER END ===================================*/
+.main {
+  padding: 20px 5%;
+  border: 2px solid white;
+  height: 300vh;
+}
+/* =================================== BIO START ===================================*/
+.bio {
+  color: var(--text);
+}
+
+.hi {
+  font-size: 16px;
+  font-family: "Courier Prime", monospace;
+  font-weight: 0;
+  color: var(--primary);
+}
+
+.love {
+  color: var(--accent);
+}
+
+.more {
+  color: var(--accent);
+}
