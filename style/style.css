@@ -96,16 +96,19 @@ body {
 
 .name {
   margin-top: 30px;
-  transition: 0.3s;
-  background: linear-gradient(var(--primary), var(--secondary));
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  width: 60%;
+  transition: 0.3s ease-in-out;
   font-size: 60px;
+  background: linear-gradient(var(--primary), var(--secondary));
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
 }
 
 .name:hover {
   transform: translate(-3px, -2px);
-  box-shadow: 3px 3px 0 var(--primary);
+  box-shadow: 3px 2px 0 var(--primary);
   border-radius: 10px;
 }
 
@@ -117,6 +120,58 @@ body {
 .more {
   color: var(--accent);
   margin-top: 30px;
+}
+
+.button {
+  padding: 10px;
+  margin: 20px 0 0 30px;
+  /* height: 60px; */
+}
+
+.button a {
+  font-family: "Courier New", Courier, monospace;
+  overflow: hidden;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 150px;
+  height: 35px;
+
+  background-color: rgb(94, 234, 212);
+  border: 2px solid rgb(94, 234, 212);
+  border-radius: 8px;
+
+  font-size: 19px;
+  color: rgb(15, 23, 42);
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.button a:hover {
+  color: rgb(94, 234, 212);
+  background-color: rgb(15, 23, 42);
+}
+
+.button a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: rgb(15, 23, 42);
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.button a:hover::before {
+  width: 100%;
 }
 
 .hero {
