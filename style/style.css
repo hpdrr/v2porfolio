@@ -76,15 +76,19 @@ body {
 /* =================================== HEADER END ===================================*/
 .main {
   padding: 20px var(--marginside);
-  height: 300vh;
+  /* height: 100vh; */
 }
 /* =================================== BIO START ===================================*/
 .container {
   display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+  /* align-items: center; */
 }
 
 .bio {
   color: var(--text);
+  flex-grow: 2;
 }
 
 .hi {
@@ -96,12 +100,13 @@ body {
 
 .name {
   margin-top: 30px;
-  width: 60%;
+  width: 100%;
   transition: 0.3s ease-in-out;
   font-size: 60px;
   background: linear-gradient(var(--primary), var(--secondary));
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
+  background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
 }
@@ -129,7 +134,8 @@ body {
 }
 
 .button a {
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Courier Prime", monospace;
+
   overflow: hidden;
   position: relative;
 
@@ -148,14 +154,12 @@ body {
   color: rgb(15, 23, 42);
   text-decoration: none;
   font-weight: 600;
-  letter-spacing: 1px;
   z-index: 1;
   transition: 0.5s;
 }
 
 .button a:hover {
   color: rgb(94, 234, 212);
-  background-color: rgb(15, 23, 42);
 }
 
 .button a::before {
