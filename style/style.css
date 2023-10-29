@@ -1,6 +1,6 @@
 :root {
   --background: rgb(10, 25, 47);
-  --primary: #64ffda;
+  --primary: rgb(100, 255, 218);
   --secondary: #57cbff;
   --text: #ccd6f6;
   --accent: #ccd6f6b0;
@@ -82,14 +82,10 @@ body {
 .container {
   display: flex;
   gap: 5em;
-  /* flex-wrap: wrap; */
-  /* justify-content: space-evenly; */
-  /* align-items: center; */
 }
 
 .bio {
   color: var(--text);
-  /* flex-grow: 2; */
   width: 60%;
 }
 
@@ -189,7 +185,7 @@ body {
 
 .me {
   height: 20em;
-  filter: grayscale(100%) contrast(1);
+  /* filter: grayscale(100%) contrast(1); */
   transition: 0.3s;
   border-radius: 100%;
   /* border: 2px solid crimson; */
@@ -197,7 +193,50 @@ body {
 
 .me:hover {
   filter: none;
+  transform: translate(-8px, -6px);
+  /* border: 2px solid var(--primary); */
+  /* box-shadow: 30px 30px var(--primary); */
 }
+
+.pic {
+  margin: 0;
+  padding: 10px;
+}
+
+.pic::before {
+  content: "";
+  position: absolute;
+  bottom: 195px;
+  right: 120px;
+  width: 320px;
+  height: 320px;
+  border-radius: 100%;
+  border: 2px solid var(--primary);
+  transition: 0.3s;
+  z-index: -1;
+}
+
+.pic:hover::before {
+  border: 2px solid var(--primary);
+  transform: translate(20px, 10px);
+}
+/* 
+.frame {
+  border: 2px solid crimson;
+  width: 20em;
+  height: 20em;
+  border-radius: 100%;
+  position: absolute;
+  right: 130px;
+  bottom: 200px;
+  transition: 0.3s;
+  z-index: -1;
+}
+.frame:hover {
+  border: 2px solid var(--primary);
+  bottom: 190px;
+  right: 120px;
+}  */
 
 /* =================================== BIO END ===================================*/
 
