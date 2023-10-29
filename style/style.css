@@ -184,7 +184,6 @@ body {
 /* =================================== CONTENT START ===================================*/
 
 .content {
-  /* height: 200vh; */
   padding-top: 100px;
 }
 
@@ -192,6 +191,7 @@ body {
   padding: 10px 0 0 10px;
   font-size: 30px;
   color: var(--text);
+  transition: 0.3s;
 }
 
 .heading::before {
@@ -209,9 +209,14 @@ body {
   top: -15px;
   right: -80px;
   height: 1px;
-  width: 30%;
+  width: 10%;
   margin-left: 20px;
   background-color: var(--feature);
+}
+
+.heading:hover {
+  color: var(--primary);
+  margin-left: -100px;
 }
 
 .content-container {
