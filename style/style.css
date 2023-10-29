@@ -12,6 +12,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
 
 /* font-family: 'Courier Prime', monospace; */
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -22,7 +26,6 @@ body {
   font-family: "Bai Jamjuree", sans-serif;
   background-color: var(--background);
   color: var(--feature);
-  /* padding: 0 10%; */
 }
 /* =================================== HEADER START ===================================*/
 .header {
@@ -75,6 +78,7 @@ body {
 }
 /* =================================== HEADER END ===================================*/
 .main {
+  margin-top: 50px;
   padding: 20px var(--marginside);
   /* height: 100vh; */
 }
@@ -178,10 +182,37 @@ body {
 /* =================================== BIO END ===================================*/
 
 /* =================================== CONTENT START ===================================*/
-/* 
+
 .content {
-  border: 2px solid crimson;
-} */
+  /* height: 200vh; */
+  padding-top: 100px;
+}
+
+.heading {
+  padding: 10px 0 0 10px;
+  font-size: 30px;
+  color: var(--text);
+}
+
+.heading::before {
+  content: "";
+  /* position: absolute;
+  bottom: 2px; */
+  margin: 0 15px 0 -30px;
+  border: 1px solid var(--feature);
+}
+
+.heading::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: -15px;
+  right: -80px;
+  height: 1px;
+  width: 30%;
+  margin-left: 20px;
+  background-color: var(--feature);
+}
 
 .content-container {
   display: flex;
@@ -191,17 +222,23 @@ body {
 
 .detail {
   width: 60%;
+  font-size: 20px;
 }
 
-/* .content-container .me {
-  border-radius: 100%;
-} */
+.detail > p {
+  margin: 5px;
+  word-spacing: 1;
+}
+
+.highlight {
+  color: var(--primary);
+}
 
 .me {
   height: 20em;
   /* width: 20em; */
   filter: grayscale(100%) contrast(1);
-  transition: 0.3s;
+  transition: 0.5s;
   border-radius: 100%;
   /* border: 2px solid crimson; */
 }
