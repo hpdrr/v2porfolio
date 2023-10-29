@@ -80,13 +80,12 @@ body {
 }
 /* =================================== BIO START ===================================*/
 .container {
-  display: flex;
-  gap: 5em;
+  height: 60vh;
 }
 
 .bio {
   color: var(--text);
-  width: 60%;
+  width: 65%;
 }
 
 .hi {
@@ -176,13 +175,6 @@ body {
   width: 100%;
 }
 
-/* .hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-} */
-
 .me {
   height: 20em;
   /* filter: grayscale(100%) contrast(1); */
@@ -206,8 +198,7 @@ body {
 .pic::before {
   content: "";
   position: absolute;
-  bottom: 195px;
-  right: 120px;
+
   width: 320px;
   height: 320px;
   border-radius: 100%;
