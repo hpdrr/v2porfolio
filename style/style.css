@@ -191,8 +191,27 @@ body {
   height: 20em;
   filter: grayscale(100%) contrast(1);
   transition: 0.3s;
+  border-radius: 100%;
+  /* border: 2px solid crimson; */
 }
 
 .me:hover {
   filter: none;
 }
+
+/* =================================== BIO END ===================================*/
+
+/* =================================== CONTENT START ===================================*/
+
+.content {
+  border: 2px solid crimson;
+}
+
+.content-container {
+  display: flex;
+}
+
+.content-container .me {
+  border-radius: 100%;
+}
+/* =================================== CONTENT END ===================================*/
