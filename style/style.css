@@ -191,7 +191,8 @@ body {
   padding: 10px 0 0 10px;
   font-size: 30px;
   color: var(--text);
-  transition: 0.3s;
+  transition: 0.4s;
+  width: 100px;
 }
 
 .heading::before {
@@ -209,14 +210,14 @@ body {
   top: -15px;
   right: -80px;
   height: 1px;
-  width: 10%;
+  width: 200%;
   margin-left: 20px;
   background-color: var(--feature);
 }
 
 .heading:hover {
   color: var(--primary);
-  margin-left: -100px;
+  margin-left: 25px;
 }
 
 .content-container {
@@ -237,6 +238,10 @@ body {
 
 .highlight {
   color: var(--primary);
+}
+
+.highlight:nth-child(1) {
+  font-weight: 600;
 }
 
 .me {
@@ -278,3 +283,52 @@ body {
   transform: translate(20px, 10px);
 }
 /* =================================== CONTENT END ===================================*/
+/* =================================== GALLERY START ===================================*/
+
+.wrapper {
+  display: flex;
+  max-width: 1200px;
+  position: relative;
+}
+
+.wrapper .carousel {
+  font-size: 0px;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+}
+
+.carousel.dragging {
+  cursor: grab;
+  scroll-behavior: auto;
+}
+
+.carousel.dragging img {
+  pointer-events: none;
+}
+
+.carousel img {
+  height: 340px;
+  object-fit: cover;
+  user-select: none;
+  margin-left: 14px;
+  width: calc(100% / 3);
+}
+
+.carousel img:first-child {
+  margin-left: 0;
+}
+
+@media (max-width: 900px) {
+  .carousel img {
+    width: calc(100% / 2);
+  }
+}
+
+@media (max-width: 550px) {
+  .carousel img {
+    width: 100%;
+  }
+}
+/* =================================== GALLERY END ===================================*/
