@@ -74,6 +74,15 @@ body {
   display: none;
   cursor: pointer;
 }
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--secondary);
+}
 
 .navbar a {
   font-size: 15px;
@@ -599,7 +608,7 @@ body {
     left: -100%;
     top: 70px;
     gap: 0;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     background-color: var(--background);
     width: 100%;
