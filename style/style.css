@@ -195,6 +195,12 @@ body {
   width: 100px;
 }
 
+.bio,
+.heading,
+.bullet {
+  cursor: default;
+}
+
 .heading::before {
   content: "";
   /* position: absolute;
@@ -366,6 +372,10 @@ body {
   background-color: var(--feature);
 }
 
+.bullet {
+  color: var(--text);
+}
+
 .activities-container .bullet::before {
   content: "⩥ ";
   color: var(--primary);
@@ -380,6 +390,43 @@ body {
 .year,
 .description {
   padding: 5px 0 10px 30px;
+}
+
+#contact .heading::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: -15px;
+  right: -105px;
+  height: 1px;
+  width: 170%;
+  margin-left: 20px;
+  background-color: var(--feature);
+}
+
+#contact {
+  height: 200vh;
+}
+
+.contact-container {
+  margin: 30px;
+  font-size: 40px;
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact-container p {
+  font-size: x-large;
+  color: var(--accent);
+  /* padding: 0 auto; */
+}
+
+.contact-text {
+  margin-top: 20px;
+  max-width: 70%;
 }
 
 @media (max-width: 900px) {
