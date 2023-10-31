@@ -11,6 +11,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
 
+/* font-family: 'Courier Prime', monospace; */
 html {
   scroll-behavior: smooth;
 }
@@ -33,13 +34,11 @@ body {
   left: 0;
   padding: 20px var(--marginside);
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background-color: rgba(10, 25, 47, 0.7);
   backdrop-filter: blur(3px);
   z-index: 100;
 }
+/* START ==== UBAH INI JIKA PAKE LOGO NONTEKS ===== */
 .logo {
   width: 50px;
   transition: 0.4s;
@@ -50,7 +49,9 @@ body {
 .logo:hover {
   transform: translate(-2px, -2px);
   box-shadow: 5px 5px 0 var(--primary);
+  /* border-radius: 10px; */
 }
+/* END ==== UBAH INI JIKA PAKE LOGO NONTEKS ==== */
 
 .number {
   color: var(--primary);
@@ -58,6 +59,15 @@ body {
 
 .navbar {
   font-family: "Courier Prime", monospace;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-menu {
+  display: flex;
+  text-decoration: none;
+  list-style: none;
 }
 
 .navbar a {
@@ -72,28 +82,16 @@ body {
 .navbar a:hover {
   color: var(--primary);
 }
-
-.hamburger {
-  display: none;
-  cursor: pointer;
-}
-
-.bar {
-  display: block;
-  width: 25px;
-  height: 3px;
-  margin: 5px auto;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  background-color: var(--secondary);
-}
-
 /* =================================== HEADER END ===================================*/
 .main {
   margin-top: 50px;
   padding: 20px var(--marginside);
+  /* height: 100vh; */
 }
 /* =================================== BIO START ===================================*/
+.container {
+  height: 60vh;
+}
 
 .bio {
   color: var(--text);
@@ -140,7 +138,10 @@ body {
   padding: 10px;
   margin: 50px 0 0 30px;
   display: flex;
+  /* justify-content: space-evenly; */
   gap: 1em;
+
+  /* height: 60px; */
 }
 .bio .button a {
   height: 40px;
@@ -221,6 +222,8 @@ body {
 
 .heading::before {
   content: "";
+  /* position: absolute;
+  bottom: 2px; */
   margin: 0 15px 0 -30px;
   border: 1px solid var(--feature);
 }
@@ -268,16 +271,19 @@ body {
 
 .me {
   height: 20em;
-
+  /* width: 20em; */
   filter: grayscale(100%) contrast(1);
   transition: 0.5s;
   border-radius: 100%;
+  /* border: 2px solid crimson; */
 }
 
 .me:hover {
   filter: none;
   transform: translate(-8px, -6px);
   border-radius: 0;
+  /* border: 2px solid var(--primary); */
+  /* box-shadow: 30px 30px var(--primary); */
 }
 
 .pic {
@@ -396,6 +402,8 @@ body {
 .activities-container .bullet::before {
   content: "⩥ ";
   color: var(--primary);
+  /* font-size: 12px; */
+  /* position: relative; */
 }
 
 .act {
@@ -454,6 +462,24 @@ body {
   margin: 10px 10px 25px 10px;
   color: var(--text);
 }
+
+/* .project-desc {
+  margin-bottom: 90px;
+} */
+
+/* .dua > .project-desc {
+  margin-bottom: 20px;
+}
+
+.empat > .project-desc {
+  margin-bottom: 70px;
+}
+
+.lima > .project-desc,
+.enam > .project-desc {
+  margin-bottom: 55px;
+} */
+
 .fa-folder {
   color: var(--primary);
 }
@@ -496,6 +522,7 @@ body {
 .contact-container p {
   font-size: x-large;
   color: var(--accent);
+  /* padding: 0 auto; */
 }
 
 .contact-text {
@@ -528,69 +555,6 @@ body {
 }
 
 /* =================================== FOOTER END ===================================*/
-
-@media screen and (max-width: 1316px) {
-  .name {
-    width: 100%;
-    display: block;
-    /* text-align: center; */
-  }
-  .header,
-  .main {
-    padding: 20px 5%;
-  }
-}
-
-@media screen and (max-width: 970px) {
-  .content-container {
-    gap: 0;
-    /* flex-direction: column; */
-    /* width: 50%; */
-  }
-  .hamburger {
-    display: block;
-  }
-
-  .hamburger.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-  .hamburger.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-
-  .nav-menu {
-    position: fixed;
-    left: -100%;
-    top: 70px;
-    gap: 0;
-    display: flex;
-    flex-direction: column;
-    background-color: var(--background);
-    width: 100%;
-    text-align: center;
-    transition: 0.3s;
-  }
-  .nav-menu > .nav-item {
-    margin: 16px 0;
-  }
-
-  .nav-menu.active {
-    left: 0;
-  }
-}
-
-@media screen and (max-width: 850px) {
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* display: block; */
-  }
-}
 
 @media (max-width: 900px) {
   .carousel img {
