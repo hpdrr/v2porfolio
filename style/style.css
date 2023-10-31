@@ -562,7 +562,7 @@ body {
     transform: translateY(-8px) rotate(-45deg);
   }
 
-  .navbar {
+  .nav-menu {
     position: fixed;
     left: -100%;
     top: 70px;
@@ -574,11 +574,11 @@ body {
     text-align: center;
     transition: 0.3s;
   }
-  .navbar > .nav-item {
+  .nav-menu > .nav-item {
     margin: 16px 0;
   }
 
-  .navbar.active {
+  .nav-menu.active {
     left: 0;
   }
 }
