@@ -406,6 +406,18 @@ body {
 /* =================================== ACTIVITiES END ===================================*/
 /* =================================== PROJECTS START ===================================*/
 
+#projects .heading::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: -15px;
+  right: -110px;
+  height: 1px;
+  width: 170%;
+  margin-left: 20px;
+  background-color: var(--feature);
+}
+
 .all-projects {
   display: flex;
   flex-wrap: wrap;
@@ -423,6 +435,12 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: 0.3s;
+}
+
+.all-projects .project:hover {
+  box-shadow: 5px 5px 0 var(--primary);
+  transform: translate(-3px, -3px);
 }
 
 .title {
