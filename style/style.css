@@ -315,13 +315,14 @@ body {
   top: 50%;
   height: 44px;
   width: 44px;
-  color: #343f4f;
+  color: var(--primary);
   cursor: pointer;
   font-size: 1.15rem;
   position: absolute;
   text-align: center;
   line-height: 44px;
-  background: #fff;
+  background: var(--background);
+  border: 2px solid var(--primary);
   border-radius: 50%;
   transform: translateY(-50%);
   transition: transform 0.1s linear;
@@ -332,7 +333,8 @@ body {
 }
 
 .wrapper i:hover {
-  background: #f2f2f2;
+  background: var(--primary);
+  color: var(--background);
 }
 
 .wrapper i:first-child {
