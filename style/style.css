@@ -72,6 +72,22 @@ body {
 .navbar a:hover {
   color: var(--primary);
 }
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--secondary);
+}
+
 /* =================================== HEADER END ===================================*/
 .main {
   margin-top: 50px;
@@ -530,6 +546,40 @@ body {
     gap: 0;
     /* flex-direction: column; */
     /* width: 50%; */
+  }
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .navbar {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+  .navbar > .nav-item {
+    margin: 16px 0;
+  }
+
+  .navbar.active {
+    left: 0;
   }
 }
 
