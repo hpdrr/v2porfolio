@@ -42,12 +42,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (carousel.scrollLeft > prevScrollLeft) {
       // if user is scrolling to the right
-      return (carousel.scrollLeft +=
-        positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff);
+      //   return (carousel.scrollLeft += positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff);
+      if (positionDiff > firstImgWidth / 3) {
+        carousel.scrollLeft += valDifference;
+      } else {
+        carousel.scrollLeft -= positionDiff;
+      }
     }
     // if user is scrolling to the left
-    carousel.scrollLeft -=
-      positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
+    // carousel.scrollLeft -= positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
+    if (positionDiff > firstImgWidth / 3) {
+      carousel.scrollLeft += valDifference;
+    } else {
+      carousel.scrollLeft -= positionDiff;
+    }
   };
 
   const dragStart = (e) => {
