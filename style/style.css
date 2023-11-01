@@ -585,8 +585,7 @@ body {
 @media screen and (max-width: 970px) {
   .content-container {
     gap: 0;
-    flex-direction: column;
-    /* width: 50%; */
+    flex-direction: column-reverse;
   }
   .hamburger {
     display: block;
@@ -629,7 +628,21 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* display: block; */
+  }
+  .name,
+  .love,
+  .more {
+    width: 150%;
+  }
+
+  .detail {
+    width: 100%;
+  }
+}
+/* ======================== disini ================== */
+@media screen and (max-width: 770px) {
+  .all-projects .project {
+    width: 100%;
   }
 }
 
