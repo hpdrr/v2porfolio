@@ -454,6 +454,7 @@ body {
   background-color: #112240;
   display: flex;
   flex-direction: column;
+  gap: 1em;
   justify-content: space-between;
   transition: 0.3s;
 }
@@ -473,15 +474,14 @@ body {
 
 .project-name {
   font-size: 30px;
-  margin: 10px 10px 25px 10px;
+  /* margin: 10px 10px 25px 10px; */
   color: var(--text);
 }
 
 /* .project-desc {
   margin-bottom: 90px;
-} */
-
-/* .dua > .project-desc {
+}
+.dua > .project-desc {
   margin-bottom: 20px;
 }
 
