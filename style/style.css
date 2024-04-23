@@ -53,9 +53,9 @@ body {
 }
 /* END ==== UBAH INI JIKA PAKE LOGO NONTEKS ==== */
 
-.number {
-  color: var(--primary);
-}
+/* .number {
+  color: var(--primary) !important;
+} */
 
 .navbar {
   font-family: "Courier Prime", monospace;
@@ -95,6 +95,10 @@ body {
 
 .navbar a:hover {
   color: var(--primary);
+}
+
+.active {
+  color: var(--primary) !important;
 }
 /* =================================== HEADER END ===================================*/
 .main {
@@ -206,6 +210,10 @@ body {
   background: rgb(15, 23, 42);
   z-index: -1;
   transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
 }
 
 .button a:hover::before {
