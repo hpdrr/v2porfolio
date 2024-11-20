@@ -377,8 +377,8 @@ body {
 .wrapper .carousel {
   font-size: 0px;
   cursor: pointer;
-  overflow: hidden;
-  white-space: nowrap;
+  /* overflow: hidden; */
+  /* white-space: nowrap; */
   scroll-behavior: smooth;
 }
 
@@ -392,7 +392,7 @@ body {
 }
 
 .carousel img {
-  height: 340px;
+  height: 200px;
   object-fit: cover;
   user-select: none;
   margin-left: 14px;
