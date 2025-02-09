@@ -293,11 +293,16 @@ body {
 
 .me {
   height: 20em;
-  /* width: 20em; */
-  filter: grayscale(100%) contrast(1);
+  /*width: 20em;
+  */filter: grayscale(100%) contrast(1);
   transition: 0.5s;
   border-radius: 100%;
-  /* border: 2px solid crimson; */
+  /*border: 2px solid crimson;
+   */:;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
 }
 
 .me:hover {
