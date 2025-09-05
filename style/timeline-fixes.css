@@ -1,0 +1,98 @@
+/* Add these styles to improve the timeline visualization */
+
+.activities-container {
+  position: relative;
+}
+
+/* Make the bullets and timeline line container relative */
+.act {
+  position: relative;
+  padding-left: 35px; /* Increased padding to give more space for timeline */
+}
+
+/* Style for main bullet points */
+.activities-container .bullet::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f111"; /* Unicode for fa-circle */
+  font-weight: 900; /* For solid icons */
+  color: var(--primary);
+  margin-right: 10px;
+  font-size: 0.8em;
+  position: absolute;
+  left: 11px; /* Aligned with vertical line */
+}
+
+/* Timeline vertical line */
+.act.first::before,
+.act.second::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 2px;
+  background-color: var(--feature);
+  z-index: -1;
+  left: 14px; /* Center aligned with bullet point center */
+  top: 25px; /* Start below the bullet */
+}
+
+/* Specific heights for different sections */
+.act.first::before {
+  height: 160px; /* Adjusted to ensure continuity */
+}
+
+.act.second::before {
+  height: 155px;
+}
+
+/* Style for sub-bullet points */
+h3.year:before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f111"; /* Unicode for fa-circle */
+  font-weight: 400; /* Lighter weight for sub-bullets */
+  color: var(--primary);
+  font-size: 0.6em;
+  position: absolute;
+  left: 13px; /* Aligned with the vertical line */
+  z-index: 1;
+}
+
+/* Year and description padding */
+.year,
+.description {
+  padding: 5px 0 10px 10px; /* Reduced padding for better text alignment */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 970px) {
+  .act.first::before,
+  .act.second::before {
+    left: 14px; /* Keep consistent alignment */
+  }
+
+  .activities-container .bullet::before {
+    left: 11px;
+  }
+
+  h3.year:before {
+    left: 13px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .act {
+    padding-left: 30px; /* Keep reasonable padding on small screens */
+  }
+
+  .act.first::before,
+  .act.second::before {
+    left: 14px; /* Keep consistent alignment */
+  }
+
+  .activities-container .bullet::before {
+    left: 11px;
+  }
+
+  h3.year:before {
+    left: 13px;
+  }
+}

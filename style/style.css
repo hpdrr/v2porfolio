@@ -448,11 +448,24 @@ body {
   font-size: 0.8em;
 }
 
+h3.year::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f111"; /* Unicode for fa-circle */
+  font-weight: 400; /* For solid icons */
+  color: var(--primary);
+  margin-right: 10px;
+  font-size: 0.8em;
+}
+
+h3.year {
+  padding-left: 0;
+}
+
 .act:first-child {
   margin-top: 20px;
 }
 
-.act.first::before {
+/* .act.first::before {
   content: "";
   position: absolute;
   display: block;
@@ -474,7 +487,7 @@ body {
   margin-left: 20px;
   background-color: var(--feature);
   z-index: -1;
-}
+} */
 /* =================================== ACTIVITiES END ===================================*/
 /* =================================== PROJECTS START ===================================*/
 
