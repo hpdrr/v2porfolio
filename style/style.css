@@ -100,6 +100,11 @@ body {
 .active {
   color: var(--primary) !important;
 }
+
+.nav-number {
+  color: var(--primary);
+  margin-right: 5px;
+}
 /* =================================== HEADER END ===================================*/
 .main {
   margin-top: 50px;
